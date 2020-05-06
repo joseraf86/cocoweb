@@ -1,0 +1,2 @@
+class OptionAnswer < UserAnswer
+end

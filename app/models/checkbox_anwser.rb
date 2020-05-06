@@ -1,0 +1,2 @@
+class CheckboxAnswer < UserAnswer
+end

@@ -1,0 +1,2 @@
+class RadioAnswer < UserAnswer
+end
