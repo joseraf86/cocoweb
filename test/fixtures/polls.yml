@@ -4,8 +4,32 @@ one:
   name: MyString
   email: MyString
   phone: MyString
+  answer1: false
+  answer2: false
+  answer3: false
+  answer4: false
+  answer5: false
+  answer6: false
+  answer7: false
+  answer8: false
+  answer9: false
+  answer10: false
+  answer11: false
+  answer12: MyText
 
 two:
   name: MyString
   email: MyString
   phone: MyString
+  answer1: false
+  answer2: false
+  answer3: false
+  answer4: false
+  answer5: false
+  answer6: false
+  answer7: false
+  answer8: false
+  answer9: false
+  answer10: false
+  answer11: false
+  answer12: MyText

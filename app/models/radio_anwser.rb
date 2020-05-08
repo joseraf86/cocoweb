@@ -1,2 +1,0 @@
-class RadioAnswer < UserAnswer
-end

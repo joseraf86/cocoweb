@@ -1,0 +1,170 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<header>
+  <a href="http://www.presidencia.gob.ve/Site/Web/Principal/paginas/classVice_Suprema_Felicidad_Social_Pueblo.php" target="_blank">
+    <img
+    id="header-pic"
+    src="https://imgur.com/dZHnpG7.png">
+    </img>
+  </a>
+</header>
+
+<main>
+  <div id="title-group">
+   <h1 id="title">
+   M.E.V.S.F.S.P.M.P.P.D.P.S.G.G.
+   </h1>
+
+   <p id="description">
+   Misión Encuesta del Viceministerio para la Suprema Felicidad del Pueblo, parte del Ministerio del Poder Popular del Despacho de la Presidencia y Seguimiento de la Gestión de Gobierno
+   </p>
+ </div>
+  <form id="survey-form">
+    <div class="question-group">
+      <label id="name-label" class="question" for="name">
+      nombre
+      </label>
+
+      <input
+      id="name"
+      type="text"
+      placeholder="Introduzca su nombre aquí"
+      required
+      >
+    </div>
+
+    <div class="question-group">
+      <label id="email-label" class="question" for="email">correo electrónico</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="Introduzca su correo aquí"
+        required>
+    </div>
+
+    <div class="question-group">
+      <label id="number-label" class="question" for="number">
+      número de teléfono
+      </label>
+
+      <input
+      id="number"
+      type="number"
+      min="1111111"
+      max="9999999"
+      placeholder="Introduzca su número aquí"
+      >
+    </div>
+
+    <div class="question-group">
+      <label id="dropdown-label" class="question" for="dropdown">
+      ¿Por qué eres feliz?
+      </label>
+
+      <select
+      id="dropdown"
+      placeholder="DROPDOWN">
+        <option disabled selected>
+        elija una opción
+        </option>
+
+        <option value="comandante">
+        El comandante eterno tocó mi corazón.
+        </option>
+
+        <option value="clap">
+        Recibo mi CLAP casi siempre que obedezco.
+        </option>
+
+        <option value="burguesitos">
+        Sé que los burguesitos la están pasando mal.
+        </option>
+
+        <option value="venezuela">
+        Vivo en Venezuela, es la tierra donde nació Bolívar.
+        </option>
+
+        <option value="infeliz">
+        A pesar de todo lo que El Pueblo ha hecho por mí, soy infeliz.
+        </option>
+      </select>
+    </div>
+
+    <div class="question-group">
+      <p class="question">Según tu oponión, ¿cuál es el origen de la infelicidad?</p>
+
+      <label for="capitalismo" class="radiocheck-label">
+        <input
+        id="capitalismo"
+        type="radio"
+        name="origen-infeliz"
+        value="capitalismo">
+      La ignorancia de creer en el capitalismo salvaje.
+      </label>
+
+      <label for="chavez" class="radiocheck-label">
+        <input
+        id="chavez"
+        type="radio"
+        name="origen-infeliz"
+        value="chavez">
+      El dolor de saber que Chávez se fue muy pronto.
+      </label>
+
+      <label for="escualido" class="radiocheck-label">
+        <input
+        id="escualido"
+        type="radio"
+        name="origen-infeliz"
+        value="escualido">
+      Ser escuálido.
+      </label>
+    </div>
+
+    <div class="question-group">
+      <p class="question">¿Qué haces para ayudar a conseguir la suprema felicidad de El Pueblo?</p>
+      <label for="votar" class="radiocheck-label">
+        <input
+        id="votar"
+        type="checkbox"
+        name="que-haces"
+        value="votar">
+      Voto cada vez que mi revolución lo necesita.
+      </label>
+
+      <label for="comunicar" class="radiocheck-label">
+        <input
+        id="comunicar"
+        type="checkbox"
+        name="que-haces"
+        value="comunicar">
+      Mantengo informados a mis camaradas cuando no tienen luz o no pueden ver VTV.
+      </label>
+
+      <label for="sapear" class="radiocheck-label">
+        <input
+        id="sapear"
+        type="checkbox"
+        name="que-haces"
+        value="sapear">
+      Mantengo informadas a las autoridades sobre lo que hacen mis camaradas.
+      </label>
+    </div>
+
+    <div class="question-group">
+      <label for="sentir" class="question">
+      ¿Cómo te haría sentir si esta encuesta no llegara a ser leída nunca?
+      </label>
+
+      <textarea
+      placeholder="Escribe tu respuesta aquí";></textarea>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        id="submit">Enviar
+      </button>
+    </div>
+  </form>
+</main>

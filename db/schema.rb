@@ -10,57 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_003115) do
+ActiveRecord::Schema.define(version: 2020_05_08_025310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "open_answers", force: :cascade do |t|
-    t.text "content"
-    t.bigint "question_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["question_id"], name: "index_open_answers_on_question_id"
-  end
-
-  create_table "poll_answers", force: :cascade do |t|
-    t.text "content"
-    t.bigint "question_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["question_id"], name: "index_poll_answers_on_question_id"
-  end
 
   create_table "polls", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "phone"
+    t.boolean "answer1"
+    t.boolean "answer2"
+    t.boolean "answer3"
+    t.boolean "answer4"
+    t.boolean "answer5"
+    t.boolean "answer6"
+    t.boolean "answer7"
+    t.boolean "answer8"
+    t.boolean "answer9"
+    t.boolean "answer10"
+    t.boolean "answer11"
+    t.text "answer12"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.text "content"
-    t.integer "question_type"
-    t.bigint "poll_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["poll_id"], name: "index_questions_on_poll_id"
-  end
-
-  create_table "user_answers", force: :cascade do |t|
-    t.bigint "question_id", null: false
-    t.bigint "poll_answer_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "type"
-    t.index ["poll_answer_id"], name: "index_user_answers_on_poll_answer_id"
-    t.index ["question_id"], name: "index_user_answers_on_question_id"
-  end
-
-  add_foreign_key "open_answers", "questions"
-  add_foreign_key "poll_answers", "questions"
-  add_foreign_key "questions", "polls"
-  add_foreign_key "user_answers", "poll_answers"
-  add_foreign_key "user_answers", "questions"
 end
