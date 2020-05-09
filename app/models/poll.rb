@@ -1,7 +1,13 @@
 class Poll < ApplicationRecord
 
+  # Validations
+  ## TODO Implement Poll model validations
+
+  # Scopes
+  scope :count_answer, ->(answer) { Poll.where({ answer => true}).count }
+
+  # Class methods
   def self.format_params(params)
-    byebug
     text_attrs = %w(name email phone open_question)
     bool_attrs = Poll.column_names - text_attrs - FRAMEWORK_ATTRS
     formated_params = {}

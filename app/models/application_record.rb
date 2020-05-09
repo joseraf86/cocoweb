@@ -1,4 +1,5 @@
 class ApplicationRecord < ActiveRecord::Base
-  FRAMEWORK_ATTRS = %w(id created_at updated_at)
   self.abstract_class = true
+
+  FRAMEWORK_ATTRS = %w(id created_at updated_at)
 end

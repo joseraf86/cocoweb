@@ -1,6 +1,5 @@
 class PollController < ApplicationController
 
-
   # GET /poll/new
   # View template already defined
   # def new; end
@@ -20,6 +19,14 @@ class PollController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def permit_poll_params
-    params.permit(:name, :email, :phone, :select, :radio, :checkbox1, :checkbox2, :checkbox3, :open_question)
+    params.permit(:name,
+                  :email,
+                  :phone,
+                  :select,
+                  :radio,
+                  :checkbox1,
+                  :checkbox2,
+                  :checkbox3,
+                  :open_question)
   end
 end
