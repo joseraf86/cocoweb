@@ -31,3 +31,4 @@
 
 en:
   hello: "Hello world"
+  success_survey:  'Gracias por llenar la encuesta voluntaria. Ahora puede llevarse su bolsa CLAP, solamente si ingresó su nombre, correo electrónico y número de teléfono'

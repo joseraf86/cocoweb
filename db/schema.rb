@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_08_025310) do
+ActiveRecord::Schema.define(version: 2020_05_09_000911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_05_08_025310) do
     t.boolean "answer9"
     t.boolean "answer10"
     t.boolean "answer11"
-    t.text "answer12"
+    t.text "open_question"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
