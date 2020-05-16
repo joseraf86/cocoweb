@@ -1,26 +1,21 @@
 <header>
   <a href="http://www.presidencia.gob.ve/Site/Web/Principal/paginas/classVice_Suprema_Felicidad_Social_Pueblo.php" target="_blank">
-    <img
-    id="header-pic"
-    src="https://imgur.com/dZHnpG7.png">
-    </img>
+    <img id="header-pic" src="https://imgur.com/dZHnpG7.png" />
   </a>
 </header>
 
 <main>
-  <p id="flash">
-    <%= flash[:notice] %>
-  </p>
   <div id="title-group">
-   <h1 id="title">
-   M.E.V.S.F.S.P.M.P.P.D.P.S.G.G.
-   </h1>
+    <h1 id="title">
+    M.E.V.S.F.S.P.M.P.P.D.P.S.G.G.
+    </h1>
 
-   <p id="description">
-   Misión Encuesta del Viceministerio para la Suprema Felicidad del Pueblo, parte del Ministerio del Poder Popular del Despacho de la Presidencia y Seguimiento de la Gestión de Gobierno
-   </p>
- </div>
-  <form id="survey-form" action="<%= poll_create_path %>">
+    <p id="description">
+    Misión Encuesta del Viceministerio para la Suprema Felicidad del Pueblo, parte del Ministerio del Poder Popular del Despacho de la Presidencia y Seguimiento de la Gestión de Gobierno
+    </p>
+  </div>
+
+  <form id="survey-form" class="content" action="<%= poll_create_path %>">
     <div class="question-group">
       <label id="name-label" class="question" for="name">
       nombre
@@ -171,4 +166,5 @@
       </button>
     </div>
   </form>
+
 </main>
