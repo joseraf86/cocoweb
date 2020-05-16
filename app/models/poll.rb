@@ -7,6 +7,14 @@ class Poll < ApplicationRecord
   scope :count_answer, ->(answer) { where({ answer => true}).count }
 
   # Class methods
+  def self.results
+    results = {}
+    1.upto 11 do |i|
+      results["answer#{i}".to_sym] = count_answer("answer#{i}".to_sym)
+    end
+    results
+  end
+
   def self.format_params(params)
     text_attrs = %w(name email phone open_question)
     bool_attrs = Poll.column_names - text_attrs - FRAMEWORK_ATTRS

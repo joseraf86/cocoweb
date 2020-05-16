@@ -13,10 +13,7 @@ class PollController < ApplicationController
 
   # GET /poll/index
   def index
-    @results = {}
-    1.upto 11 do |i|
-      @results["answer#{i}".to_sym] = Poll.count_answer("answer#{i}".to_sym)
-    end
+   @results = Poll.results
   end
 
   private
