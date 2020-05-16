@@ -4,7 +4,7 @@ class Poll < ApplicationRecord
   ## TODO Implement Poll model validations
 
   # Scopes
-  scope :count_answer, ->(answer) { Poll.where({ answer => true}).count }
+  scope :count_answer, ->(answer) { where({ answer => true}).count }
 
   # Class methods
   def self.format_params(params)

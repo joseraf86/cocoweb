@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'poll#new'
   get 'poll/new'
   get 'poll/create'
+  get 'poll/index'
 end

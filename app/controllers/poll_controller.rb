@@ -8,7 +8,15 @@ class PollController < ApplicationController
   def create
     Poll.create(format_params)
     flash[:notice] = I18n.t 'success_survey'
-    redirect_to poll_new_path
+    redirect_to poll_index_path
+  end
+
+  # GET /poll/index
+  def index
+    @results = {}
+    1.upto 11 do |i|
+      @results["answer#{i}".to_sym] = Poll.count_answer("answer#{i}".to_sym)
+    end
   end
 
   private
