@@ -33,12 +33,20 @@
     word-break: normal;
   }
 
-  #flash {
+  .poll_flash {
     max-width: 35rem;
     margin:0 auto 2rem;
     word-break: normal;
     text-align: center;
     color: green;
+  }
+
+  .poll_errors {
+    max-width: 35rem;
+    margin:0 auto 2rem;
+    word-break: normal;
+    text-align: center;
+    color: red;
   }
 
   .content {

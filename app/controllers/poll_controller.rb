@@ -1,17 +1,24 @@
 class PollController < ApplicationController
 
   # GET /poll/new
-  # View template already defined
-  # def new; end
+  ##TODO: Utilizar elos helpers del form_with
+  ##TODO crear partial de errores e internacionalizar plural de errores
+  def new
+    @poll = Poll.new
+  end
 
   # POST /poll/create
   def create
-    Poll.create(format_params)
-    flash[:notice] = I18n.t 'success_survey'
-    redirect_to poll_index_path
+    @poll = Poll.new(format_params)
+    if @poll.save
+      redirect_to poll_index_url, notice: t('success_survey')
+    else
+      render :new
+    end
   end
 
   # GET /poll/index
+  ##TODO: Craer una pagina especifica que muestre los resultados
   def index
    @results = Poll.results
   end
